@@ -142,8 +142,8 @@ def _parse_ripgrep_json(json_output: str, max_results: int) -> tuple[list[Search
                 file_path = match_data["path"]["text"]
                 files_searched.add(file_path)
 
-                # If we're collecting context after a previous match, finalize it
-                if current_match and collecting_after:
+                # If we have a previous match, finalize it before starting new one
+                if current_match:
                     matches.append(SearchMatch(
                         file_path=current_match["file_path"],
                         line_number=current_match["line_number"],

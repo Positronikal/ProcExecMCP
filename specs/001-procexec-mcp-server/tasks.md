@@ -256,12 +256,12 @@ Each user story is independently testable and delivers standalone value.
 
 ### Tasks
 
-- [ ] T071 Import all tool functions in src/procexec/server.py (search_file_contents_impl, execute_command_impl, list_processes_impl, kill_process_impl)
-- [ ] T072 Create FastMCP instance in src/procexec/server.py with name="ProcExecMCP", json_response=True, stateless_http=True
-- [ ] T073 Load ServerConfig from environment in src/procexec/server.py and store as server state (accessible via Context)
-- [ ] T074 Implement main() function in src/procexec/__main__.py to call mcp.run(transport="streamable-http") from server.py
-- [ ] T075 Add __main__ block in src/procexec/__main__.py to call main() for python -m procexec execution
-- [ ] T076 Add [project.scripts] entry in pyproject.toml mapping "procexec" command to "procexec.__main__:main"
+- [X] T071 Import all tool functions in src/procexec/server.py (search_file_contents_impl, execute_command_impl, list_processes_impl, kill_process_impl)
+- [X] T072 Create FastMCP instance in src/procexec/server.py with name="ProcExecMCP", json_response=True, stateless_http=True
+- [X] T073 Load ServerConfig from environment in src/procexec/server.py and store as server state (accessible via Context)
+- [X] T074 Implement main() function in src/procexec/__main__.py to call mcp.run(transport="streamable-http") from server.py
+- [X] T075 Add __main__ block in src/procexec/__main__.py to call main() for python -m procexec execution
+- [X] T076 Add [project.scripts] entry in pyproject.toml mapping "procexec" command to "procexec.__main__:main"
 
 **Completion Criteria**:
 - ✅ All 4 tools registered and accessible

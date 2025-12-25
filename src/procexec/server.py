@@ -57,8 +57,8 @@ class ServerConfig:
         )
 
 
-# Initialize FastMCP server
+# Initialize FastMCP server with structured output configuration
 mcp = FastMCP("ProcExecMCP")
 
-# Load configuration
+# Load configuration from environment variables
 config = ServerConfig.from_environment()

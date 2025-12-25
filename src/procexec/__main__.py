@@ -3,7 +3,8 @@
 import sys
 
 from .server import mcp
-from .tools import search  # Import to register @mcp.tool() decorators
+# Import all tool modules to register @mcp.tool() decorators
+from .tools import search, execute, processes
 
 
 def main() -> None:

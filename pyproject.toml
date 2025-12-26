@@ -4,15 +4,15 @@ version = "1.0.0"
 description = "Stateless command execution and process management MCP server for Claude"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = { text = "GPL-3.0-or-later" }
 authors = [
-    { name = "ProcExecMCP Contributors" }
+    { name = "Hoyt Harness", email = "hoyt.harness@gmail.com" }
 ]
 keywords = ["mcp", "model-context-protocol", "command-execution", "process-management", "claude"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

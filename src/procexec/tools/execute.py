@@ -142,7 +142,8 @@ def _execute_subprocess(
             timeout=timeout_seconds,
             cwd=str(cwd) if cwd else None,
             shell=False,  # CRITICAL: Never use shell=True
-            check=False   # Don't raise on non-zero exit
+            check=False,  # Don't raise on non-zero exit
+            stdin=subprocess.DEVNULL  # Prevent stdin hang on Windows
         )
 
         stdout = result.stdout if result.stdout else ""

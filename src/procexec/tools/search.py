@@ -220,7 +220,8 @@ def _execute_ripgrep(args: list[str], timeout_ms: int) -> str:
             capture_output=True,
             text=True,
             timeout=timeout_ms / 1000.0,  # Convert to seconds
-            shell=False  # SECURITY: Never use shell=True
+            shell=False,  # SECURITY: Never use shell=True
+            stdin=subprocess.DEVNULL  # Prevent stdin hang on Windows
         )
 
         # ripgrep exit codes:

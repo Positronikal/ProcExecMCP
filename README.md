@@ -34,7 +34,7 @@ For comprehensive security documentation, see [SECURITY_ARCHITECTURE.md](./SECUR
 
 ```bash
 # Clone repository
-git clone <repository-url> ProcExecMCP
+git clone https://github.com/Positronikal/ProcExecMCP.git ProcExecMCP
 cd ProcExecMCP
 
 # Install with uv
@@ -162,28 +162,7 @@ Terminate process 1234 gracefully
 
 ## Development
 
-### Running Tests
-
-```bash
-# All tests
-uv run pytest
-
-# With coverage
-uv run pytest --cov=src/procexec --cov-report=html
-
-# Security tests only
-uv run pytest tests/security/ -v
-```
-
-### Running Server Manually
-
-```bash
-# Start server (for MCP Inspector or debugging)
-uv run procexec
-
-# Or as module
-uv run python -m procexec
-```
+For development setup, running tests, modifying the server, and building documentation, see [USING.md](./USING.md).
 
 ## Documentation
 
@@ -220,6 +199,6 @@ Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for 
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/positronikal/procexec-mcp/issues)
+- **Issues**: [GitHub Issues](https://github.com/Positronikal/ProcExecMCP/issues)
 - **Security**: See [SECURITY.md](./SECURITY.md) for responsible disclosure
 - **Documentation**: See `docs/` for API reference

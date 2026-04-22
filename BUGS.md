@@ -4,7 +4,7 @@
 
 If you encounter a bug or unexpected behavior, please report it via GitHub Issues:
 
-1. Navigate to the [Issues](https://github.com/positronikal/procexec-mcp/issues) page
+1. Navigate to the [Issues](https://github.com/Positronikal/ProcExecMCP/issues) page
 2. Click "New Issue"
 3. Provide a clear title and detailed description
 4. Include reproduction steps, expected behavior, and actual behavior
@@ -159,12 +159,12 @@ For security issues, please follow the responsible disclosure process in [SECURI
 
 ## Known Issues
 
-No known issues at this time. Check [GitHub Issues](https://github.com/positronikal/procexec-mcp/issues) for current bug reports.
+No known issues at this time. Check [GitHub Issues](https://github.com/Positronikal/ProcExecMCP/issues) for current bug reports.
 
 ## Version Information
 
 When reporting issues, please include:
-- ProcExecMCP version: Check `pyproject.toml` or `git describe --tags`
+- ProcExecMCP version: `git describe --tags` or `python -c "import procexec; print(procexec.__version__)"`
 - Python version: `python --version`
 - Operating system and version
 - Claude Desktop version (if applicable)

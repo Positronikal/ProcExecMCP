@@ -48,4 +48,4 @@ ProcExecMCP includes multiple security layers:
 - Error message sanitization
 - Comprehensive security test suite
 
-For detailed security architecture, see `etc/SECURITY_ARCHITECTURE.md`.
+For detailed security architecture, see [SECURITY_ARCHITECTURE.md](./SECURITY_ARCHITECTURE.md).

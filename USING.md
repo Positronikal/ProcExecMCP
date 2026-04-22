@@ -16,8 +16,8 @@ This guide is for developers who want to fork, modify, or contribute to ProcExec
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/positronikal/procexec-mcp.git
-cd procexec-mcp
+git clone https://github.com/Positronikal/ProcExecMCP.git
+cd ProcExecMCP
 ```
 
 ### 2. Install Dependencies
@@ -355,7 +355,8 @@ asyncio.run(test())
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines and
+[COPYING.md](./COPYING.md) for the full license text that governs all contributions.
 
 ### Development Workflow
 
@@ -411,7 +412,7 @@ dist/procexec      # Unix
 uv build
 
 # Install from package
-pip install dist/procexec-1.0.0-py3-none-any.whl
+pip install dist/procexec-*.whl
 ```
 
 ## Troubleshooting

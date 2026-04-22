@@ -191,7 +191,7 @@ For more troubleshooting guidance, see [BUGS.md](./BUGS.md).
 
 ## License
 
-This project is licensed under the GNU General Public License version 3 (GPLv3). See [COPYING.md](./COPYING.md) for the full license text.
+This project is licensed under the GNU General Public License version 3 or any later version (GPLv3+). See [COPYING.md](./COPYING.md) for the full license text.
 
 ## Contributing
 

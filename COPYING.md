@@ -1,20 +1,21 @@
-# GNU General Public License (GPL) v3
+# GNU General Public License (GPL) v3 or Later
 
-This project is licensed under the GNU General Public License version 3.
+This project is licensed under the GNU General Public License version 3 or any
+later version (GPLv3+).
 
 ## Key Requirements
-The GPL v3 ensures that:
+The GPL v3 or later ensures that:
 - You have the freedom to use, study, modify, and distribute this software
-- Any derivative works must also be licensed under GPL v3
+- Any derivative works must also be licensed under GPL v3 or any later version
 - Source code must be made available when distributing the software
 - Users must be informed of their rights under this license
 
-## Using GPL v3 Code
-When using code licensed under GPL v3:
+## Using GPL v3 or Later Code
+When using code licensed under GPL v3 or later:
 - Include this license notice in your project
-- Provide the full GPL v3 license text to users
+- Provide the full GPL v3 (or later) license text to users
 - Make source code available
-- License your entire work under GPL v3
+- License your entire work under GPL v3 or any later version
 
 ## Full License Text
 The complete GPL v3 license text is available at:

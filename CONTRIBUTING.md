@@ -61,9 +61,9 @@ uv run pytest tests/security/ -v
 
 ## Licensing
 
-This project is licensed under the GNU General Public License (GPLv3), but it is not a GNU project and its copyright is not assigned to the Free Software Foundation (FSF). This means that while the project is free and open-source, the legal responsibility for defending the license rests with the project's maintainers.
+This project is licensed under the GNU General Public License version 3 or any later version (GPLv3+), but it is not a GNU project and its copyright is not assigned to the Free Software Foundation (FSF). This means that while the project is free and open-source, the legal responsibility for defending the license rests with the project's maintainers.
 
-By contributing to this project, you agree that your contributions will be licensed under the same license as the project (GPLv3).
+By contributing to this project, you agree that your contributions will be licensed under the same license as the project (GPLv3+).
 
 For any non-trivial contribution, we require a signed contributor license agreement (CLA). This is a standard practice in many open-source projects and helps protect both you and the project. To get a copy of the CLA, please email [hoyt.harness@gmail.com](mailto:hoyt.harness@gmail.com).
 

@@ -4,7 +4,7 @@ dynamic = ["version"]
 description = "Stateless command execution and process management MCP server for Claude"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "GPL-3.0-only" }
+license = { text = "GPL-3.0-or-later" }
 authors = [
     { name = "Hoyt Harness", email = "hoyt.harness@gmail.com" }
 ]
@@ -12,7 +12,7 @@ keywords = ["mcp", "model-context-protocol", "command-execution", "process-manag
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",

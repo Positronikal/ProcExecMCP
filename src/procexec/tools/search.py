@@ -10,7 +10,6 @@ from pathlib import Path
 from mcp.server.fastmcp import Context
 
 from ..server import config, mcp
-from ..utils.platform import is_windows
 from ..utils.validation import SanitizedError, sanitize_error_message, validate_path
 from .schemas import SearchFileContentsInput, SearchFileContentsOutput, SearchMatch
 
@@ -121,7 +120,6 @@ def _parse_ripgrep_json(json_output: str, max_results: int) -> tuple[list[Search
     current_match: dict | None = None
     context_before: list[str] = []
     context_after: list[str] = []
-    collecting_after = False
 
     for line in json_output.splitlines():
         if not line.strip():
@@ -153,7 +151,6 @@ def _parse_ripgrep_json(json_output: str, max_results: int) -> tuple[list[Search
                     ))
                     context_before = []
                     context_after = []
-                    collecting_after = False
 
                 # Start new match
                 line_number = match_data["line_number"]
@@ -182,9 +179,8 @@ def _parse_ripgrep_json(json_output: str, max_results: int) -> tuple[list[Search
                         context_before.append(line_text)
                     else:
                         context_after.append(line_text)
-                        collecting_after = True
 
-        except (json.JSONDecodeError, KeyError) as e:
+        except (json.JSONDecodeError, KeyError):
             # Skip malformed JSON lines
             continue
 
@@ -219,6 +215,8 @@ def _execute_ripgrep(args: list[str], timeout_ms: int) -> str:
             args,
             capture_output=True,
             text=True,
+            encoding='utf-8',
+            errors='replace',
             timeout=timeout_ms / 1000.0,  # Convert to seconds
             shell=False,  # SECURITY: Never use shell=True
             stdin=subprocess.DEVNULL  # Prevent stdin hang on Windows

@@ -8,7 +8,6 @@ from pathlib import Path
 from mcp.server.fastmcp import Context
 
 from ..server import config, mcp
-from ..utils.platform import is_windows
 from ..utils.validation import SanitizedError, sanitize_error_message, validate_directory
 from .schemas import ExecuteCommandInput, ExecuteCommandOutput
 
@@ -139,6 +138,8 @@ def _execute_subprocess(
             args,
             capture_output=capture_output,
             text=True,
+            encoding='utf-8',
+            errors='replace',
             timeout=timeout_seconds,
             cwd=str(cwd) if cwd else None,
             shell=False,  # CRITICAL: Never use shell=True

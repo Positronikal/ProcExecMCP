@@ -237,6 +237,33 @@ class TestCommandParsing:
         assert result.exit_code == 0
 
 
+class TestUtf8OutputDecoding:
+    """Tests that non-ASCII UTF-8 subprocess output is decoded correctly."""
+
+    @pytest.mark.asyncio
+    async def test_utf8_characters_preserved(self):
+        """Subprocess UTF-8 bytes must survive the decode step intact.
+
+        Regression test for Bug 06: text=True without encoding='utf-8' caused
+        Python to use the system ANSI codepage (CP-1252 on Windows en-US),
+        silently corrupting any non-ASCII bytes as mojibake.
+
+        We write raw UTF-8 bytes via sys.stdout.buffer to replicate what a
+        UTF-8-clean binary (e.g. gws) does when piped through ProcExecMCP.
+        """
+        # Write raw UTF-8 bytes directly to the pipe, bypassing sys.stdout
+        # text-mode encoding — same as what gws and other UTF-8 binaries do.
+        result = await execute_command(
+            "python -c \"import sys; sys.stdout.buffer.write("
+            "'caf\\u00e9 \\u2014 r\\u00e9sum\\u00e9\\n'.encode('utf-8'))\""
+        )
+
+        assert result.exit_code == 0
+        assert 'café' in result.stdout
+        assert '—' in result.stdout
+        assert 'résumé' in result.stdout
+
+
 class TestInputValidation:
     """Tests for input validation."""
 

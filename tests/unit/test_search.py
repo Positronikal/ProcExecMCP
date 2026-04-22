@@ -2,7 +2,7 @@
 
 import pytest
 import json
-from unittest.mock import patch, MagicMock, Mock
+from unittest.mock import patch, MagicMock
 from src.procexec.tools.search import (
     _check_ripgrep_available,
     _build_ripgrep_args,

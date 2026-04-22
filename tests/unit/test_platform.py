@@ -1,6 +1,5 @@
 """Unit tests for platform utilities."""
 
-import pytest
 from unittest.mock import patch
 from src.procexec.utils.platform import get_platform, is_windows, is_unix
 

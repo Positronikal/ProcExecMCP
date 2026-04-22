@@ -1,10 +1,10 @@
 [project]
 name = "procexec"
-version = "1.0.0"
+dynamic = ["version"]
 description = "Stateless command execution and process management MCP server for Claude"
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "GPL-3.0-or-later" }
+license = { text = "GPL-3.0-only" }
 authors = [
     { name = "Hoyt Harness", email = "hoyt.harness@gmail.com" }
 ]
@@ -12,7 +12,7 @@ keywords = ["mcp", "model-context-protocol", "command-execution", "process-manag
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -36,8 +36,11 @@ dev = [
 procexec = "procexec.__main__:main"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/procexec"]

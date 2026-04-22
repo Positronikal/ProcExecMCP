@@ -92,11 +92,6 @@ async def test_search_with_context_lines():
     )
 
     if result.matches:
-        # At least one match should have context (if there are surrounding lines)
-        has_context = any(
-            len(m.context_before) > 0 or len(m.context_after) > 0
-            for m in result.matches
-        )
         # Note: context may be empty if match is at file boundaries
         # So we just verify the fields exist and are lists
         for match in result.matches:

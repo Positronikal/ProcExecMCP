@@ -85,7 +85,7 @@ def _get_process_info(proc: psutil.Process) -> ProcessInfo | None:
         # Defunct process - skip
         return None
 
-    except Exception as e:
+    except Exception:
         # Unexpected error - skip process but don't fail entire operation
         return None
 

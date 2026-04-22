@@ -10,7 +10,11 @@ Security is paramount: no shell injection, mandatory timeouts, resource limits,
 path validation, and sanitized error messages.
 """
 
-__version__ = "1.0.0"
+from importlib.metadata import PackageNotFoundError, version as _pkg_version
+try:
+    __version__ = _pkg_version("procexec")
+except PackageNotFoundError:
+    __version__ = "unknown"
 __all__ = [
     "search_file_contents",
     "execute_command",

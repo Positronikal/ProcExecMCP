@@ -146,9 +146,6 @@ class TestProcessCountAndTruncation:
     @pytest.mark.asyncio
     async def test_total_count_accurate(self):
         """Test that total_count reflects all matching processes."""
-        # Get all processes
-        result_all = await list_processes(limit=1000)
-
         # Get limited results
         result_limited = await list_processes(limit=10)
 
@@ -385,7 +382,7 @@ class TestProcessTermination:
             try:
                 test_proc.kill()
                 test_proc.wait(timeout=1)
-            except:
+            except Exception:
                 pass
 
     @pytest.mark.asyncio
@@ -417,7 +414,7 @@ class TestProcessTermination:
             try:
                 test_proc.kill()
                 test_proc.wait(timeout=1)
-            except:
+            except Exception:
                 pass
 
     @pytest.mark.asyncio
@@ -457,7 +454,7 @@ class TestProcessTermination:
             try:
                 test_proc.kill()
                 test_proc.wait(timeout=1)
-            except:
+            except Exception:
                 pass
 
 
@@ -505,5 +502,5 @@ class TestIndependentTestKillProcess:
             try:
                 test_proc.kill()
                 test_proc.wait(timeout=1)
-            except:
+            except Exception:
                 pass

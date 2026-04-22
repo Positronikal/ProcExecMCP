@@ -1,8 +1,6 @@
 """Security tests for path validation and traversal prevention."""
 
 import pytest
-import tempfile
-from pathlib import Path
 from src.procexec.utils.validation import validate_path, SanitizedError
 
 
